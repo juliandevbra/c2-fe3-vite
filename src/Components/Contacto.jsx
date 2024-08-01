@@ -1,6 +1,4 @@
-import React from "react";
 import Button from "./Button";
-import Navbar from "./Navbar";
 
 const Contacto = () => {
   return (

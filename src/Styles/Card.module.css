@@ -1,0 +1,18 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fdf2da;
+  color: firebrick;
+}
+
+.cardImg {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}

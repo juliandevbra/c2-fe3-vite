@@ -1,17 +1,23 @@
-import "./App.css";
-import Card from "./Components/Card";
-import Contacto from "./Components/Contacto";
+import "./Styles/App.css";
+import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
+
 function App() {
+  const lista = ["Elemento 1", "Elemento 1", "Elemento 2", "Elemento 3"];
+  const mapLista = lista.map((item, index) => {
+    return <li key={index}>{item}</li>;
+  });
+  // console.log(mapLista);
   return (
     <>
       <Navbar />
-      <h1>Bienvenidos a Vite</h1>
-      <Card nombre={"Claudia"} email="clau98@gmail.com" />
-      <Card nombre={"David"} email="davidelmejor@yahoo.com" />
-      <Card nombre={"Ingrid"} email="ingrid_mv@hotmail.com" />
-
-      <Contacto />
+      <Home />
+      {/* <ul>{mapLista}</ul> */}
+      {/* <ul>
+        {lista.map((item, index) => {
+          return <li key={index}>{item}</li>;
+        })}
+      </ul> */}
     </>
   );
 }
