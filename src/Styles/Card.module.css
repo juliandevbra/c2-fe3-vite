@@ -16,3 +16,37 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btnGroup button {
+  min-width: 30px;
+  background-color: transparent;
+  border: 1px solid firebrick;
+  margin: 5px;
+  color: firebrick;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btnGroup button:hover {
+  box-shadow: 2px 2px 5px #000;
+}
+
+.btnGroup button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+.cartBtn {
+  background-color: transparent;
+  border: 1px solid firebrick;
+  color: firebrick;
+  transition: 0.3s;
+}
+.cartBtn:hover {
+  box-shadow: 2px 2px 5px #000;
+}

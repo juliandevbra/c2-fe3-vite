@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import CardStyles from "../Styles/Card.module.css";
 
 const Counter = () => {
   //   let contador = 0;
@@ -16,7 +17,7 @@ const Counter = () => {
     console.log(counter);
   };
   return (
-    <div>
+    <div className={CardStyles.btnGroup}>
       <Button onClick={restar}>-</Button>
       <h4>{counter}</h4>
       <Button onClick={sumar}>+</Button>
