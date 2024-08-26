@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { pizzas } from "../utils/pizzas";
-import Card from "./Card";
+import Card from "../Components/Card";
 import axios from "axios";
 
 const titleStyles = {
@@ -28,16 +27,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <div>
-        <h2>Pedidos</h2>
-        <ul>
-          {cart.map((pedido) => (
-            <li key={pedido.id}>{pedido.tipo}</li>
-          ))}
-        </ul>
-      </div> */}
-
-      <h1 style={titleStyles}>Lista de pizzas</h1>
+      <h1 style={titleStyles}>Lista de recetas</h1>
       <div className="list-container">
         {recipes.map((recipe) => (
           <Card key={recipe.id} recipe={recipe} cart={cart} setCart={setCart} />

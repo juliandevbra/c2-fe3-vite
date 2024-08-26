@@ -1,9 +1,10 @@
 import Button from "./Button";
 import CardStyles from "../Styles/Card.module.css";
 import Counter from "./Counter";
+import { Link } from "react-router-dom";
 
 const Card = ({ recipe, cart, setCart }) => {
-  const { image, title, pricePerServing } = recipe;
+  const { id, image, title, pricePerServing } = recipe;
   return (
     <div className={CardStyles.cardContainer}>
       <img src={image} alt="" className={CardStyles.cardImg} />
@@ -11,7 +12,9 @@ const Card = ({ recipe, cart, setCart }) => {
       <h4>${pricePerServing}</h4>
       <Counter />
       <Button onClick={() => setCart([...cart, recipe])}>🛒</Button>
-      <Button>Ver detalle</Button>
+      <Link to={"/detail/" + id}>
+        <Button>Ver detalle</Button>
+      </Link>
     </div>
   );
 };

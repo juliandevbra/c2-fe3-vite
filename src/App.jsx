@@ -1,18 +1,26 @@
+import { Route, Routes } from "react-router-dom";
 import "./Styles/App.css";
-import Home from "./Components/Home";
+import Home from "./Pages/Home";
+import Contacto from "./Pages/Contacto";
+import Cart from "./Pages/Cart";
 import Navbar from "./Components/Navbar";
-import Form from "./Components/Form";
-import DogFetch from "./Components/DogFetch";
-import CatAxios from "./Components/CatAxios";
+import { routes } from "./utils/routes";
+import Detail from "./Pages/Detail";
 
 function App() {
   return (
     <>
-      {/* <DogFetch />
-      <CatAxios /> */}
       <Navbar />
-      <Form />
-      <Home />
+      <Routes>
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.contact} element={<Contacto />} />
+        <Route path={routes.cart} element={<Cart />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route
+          path={routes.notFound}
+          element={<h1>Error 404 - Page not Found</h1>}
+        />
+      </Routes>
     </>
   );
 }
