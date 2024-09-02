@@ -33,3 +33,31 @@ h4 {
 h1 {
   color: #000;
 }
+.parent {
+  padding: 20px;
+  height: 58vh;
+  background-color: #bbbbbb;
+}
+
+.child {
+  width: 90%;
+  height: 70%;
+  display: block;
+  margin: auto;
+  background-color: #8282f2;
+}
+
+.lobo-estepario {
+  background-color: beige;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.lobo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
