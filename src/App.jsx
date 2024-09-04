@@ -6,17 +6,12 @@ import Cart from "./Pages/Cart";
 import Navbar from "./Components/Navbar";
 import { routes } from "./utils/routes";
 import Detail from "./Pages/Detail";
-import ParentComponent from "./Clase 13/ParentComponent";
-import LoboEstepario from "./Clase 13/LoboEstepario";
-import Context from "./Clase 13/Context";
+import ReducerCount from "./Components/ReducerCount";
 
 function App() {
   return (
     <>
-      {/* <Context>
-        <ParentComponent />
-        <LoboEstepario />
-      </Context> */}
+      {/* <ReducerCount /> */}
       <Navbar />
       <Routes>
         <Route path={routes.home} element={<Home />} />

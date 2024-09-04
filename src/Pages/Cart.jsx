@@ -3,10 +3,10 @@ import { useRecipeStates } from "../Context/Context";
 import Card from "../Components/Card";
 
 const Cart = () => {
-  const { cart } = useRecipeStates();
+  const { state } = useRecipeStates();
   return (
     <div>
-      {cart.map((recipe) => (
+      {state.cart.map((recipe) => (
         <Card key={recipe.id} recipe={recipe} />
       ))}
     </div>
