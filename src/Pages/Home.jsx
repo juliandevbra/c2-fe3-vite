@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "../Components/Card";
 import axios from "axios";
 import { useRecipeStates } from "../Context/Context";
+import withErrorBoundary from "../HOC/withErrorBoundary";
 
 const titleStyles = {
   backgroundColor: "#ffda92",
@@ -25,4 +26,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+const HomeWithError = withErrorBoundary(Home);
+export default HomeWithError;

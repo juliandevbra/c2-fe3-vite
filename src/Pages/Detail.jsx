@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import withErrorBoundary from "../HOC/withErrorBoundary";
 
 const Detail = () => {
   const [recipe, setRecipe] = useState({});
@@ -17,9 +20,21 @@ const Detail = () => {
         setRecipe(res.data);
         setTimeout(() => {
           setLoading(false);
+          toast("Receta obtenida!", {
+            theme: "light",
+            draggable: true,
+          });
         }, 2000);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Error al traer la receta!",
+          footer: err,
+        });
+      });
   }, []);
 
   return (
@@ -36,5 +51,5 @@ const Detail = () => {
     </div>
   );
 };
-
-export default Detail;
+const DetailWithError = withErrorBoundary(Detail);
+export default DetailWithError;

@@ -1,6 +1,7 @@
 import React from "react";
 import { useRecipeStates } from "../Context/Context";
 import Card from "../Components/Card";
+import withErrorBoundary from "../HOC/withErrorBoundary";
 
 const Cart = () => {
   const { state } = useRecipeStates();
@@ -12,5 +13,5 @@ const Cart = () => {
     </div>
   );
 };
-
-export default Cart;
+const CartWithError = withErrorBoundary(Cart);
+export default CartWithError;
